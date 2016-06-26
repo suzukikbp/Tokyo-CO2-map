@@ -416,7 +416,7 @@ d3sparql.barchart = function(json, config) {
     .attr("y", function(d) {return scale_y(d[opts.var_y].value)})
     .attr("height", function(d) {return opts.height - scale_y(parseInt(d[opts.var_y].value)) - opts.margin})
 	.on("mouseover", function(){
-        d3.select(this) // マウスに重なった要素を選択
+        d3.select(this) 
             .attr("style", "fill:rgb(0,0,255)")
 			.append("title")
 			.text(function(d){ 
@@ -428,7 +428,7 @@ d3sparql.barchart = function(json, config) {
 			})
     })
     .on("mouseout", function(){
-        d3.select(this) // マウスに重なっていた要素を選択
+        d3.select(this) 
             .attr( "style", "fill:#DC143C")
     })
 	
@@ -460,7 +460,7 @@ d3sparql.barchart = function(json, config) {
 
   // default CSS/SVG
   bar.attr({
-    "fill": "crimson",//steelblue
+    "fill": "crimson",
   })
   svg.selectAll(".axis").attr({
     "stroke": "black",
@@ -648,11 +648,8 @@ d3sparql.scatterplot = function(json, config) {
     .append("svg")
     .attr("width", opts.width)
     .attr("height", opts.height)
-	.attr("id", opts.output_bubble)
-	
-	console.log(svg)
-	//.append("title")
-    //.text(function(d){ console.log(d); })
+    .attr("id", opts.output_bubble)
+
   
   //cleanup old graph 
   var rect = svg.selectAll("rect")
@@ -692,7 +689,7 @@ d3sparql.scatterplot = function(json, config) {
 			})
     })
     .on("mouseout", function(){
-        d3.select(this) // マウスに重なっていた要素を選択
+        d3.select(this) 
             .attr( "style", function paint(d,i){
 		var tmp = Object.keys(d);
 		for (var i=0, len=tmp.length; i<len; i++){
@@ -950,11 +947,11 @@ d3sparql.triplemap = function(json, config) {
 			}
 				
 			}
-		}, //"lightblue"
+		}, 
     "opacity": 0.5,
   })
   .on("mouseover", function(){
-        d3.select(this) // マウスに重なった要素を選択
+        d3.select(this) 
             .attr("style", "fill:rgb(0,0,255)")
 			.append("title")
 			.text(function(d){ 
@@ -966,7 +963,7 @@ d3sparql.triplemap = function(json, config) {
 			})
     })
     .on("mouseout", function(){
-        d3.select(this) // マウスに重なっていた要素を選択
+        d3.select(this) 
             .attr( "style", function paint(d,i){
 		var tmp = Object.keys(d);
 		for (var i=0, len=tmp.length; i<len; i++){
@@ -1015,9 +1012,7 @@ d3sparql.triplemap = function(json, config) {
 	overlay.destroy();
 	overlay = new OpenLayers.Layer.Vector("states");
     overlay.afterAdd = function () {
-        //ベクターレイヤーのdivエレメントを取得
         var div = d3.selectAll("#" + overlay.div.id);
-        //既存のsvgレイヤを削除して新たなsvg要素を追加
         div.selectAll("svg").remove();
         var svg = div.append("svg");
         g = svg.append("g");
@@ -1193,7 +1188,7 @@ d3sparql.triplemap = function(json, config) {
 
   // default CSS/SVG
   bar.attr({
-    "fill": "crimson",//steelblue
+    "fill": "crimson",
   })
   svg2.selectAll(".axis").attr({
     "stroke": "black",
@@ -1209,14 +1204,6 @@ d3sparql.triplemap = function(json, config) {
   
 }
 
-d3sparql.layerDelete = function(config){
-	var opts = {
-	"basemap":	config.basemap	|| null,
-  }
-  opts.basemap.removeLayer(overlay);
-}
-
-//::::hard coding
 d3sparql.geomap = function(json, config){
 	var head = json.head.vars
 	var data = json.results.bindings
@@ -1240,9 +1227,7 @@ d3sparql.geomap = function(json, config){
 	overlay.destroy();
 	overlay = new OpenLayers.Layer.Vector("states");
     overlay.afterAdd = function () {
-        //ベクターレイヤーのdivエレメントを取得
         var div = d3.selectAll("#" + overlay.div.id);
-        //既存のsvgレイヤを削除して新たなsvg要素を追加
         div.selectAll("svg").remove();
         var svg = div.append("svg");
  
@@ -1270,14 +1255,9 @@ d3sparql.geomap = function(json, config){
 		}
 		
 		var color = scale.range([opts.color_min, opts.color_max]).domain(extent)
-		
-         //地図の左下と右上の緯度経度取得
+	
         var bounds = d3.geo.bounds(geoData);
- 
-         //緯度経度->パスジェネレーター関数作成
         var path = d3.geo.path().projection(project);
- 
-        //geojsonデータからpathを作成
         var feature = g.selectAll("path")
                 .data(geoData.features)
                 .enter()
@@ -1290,7 +1270,7 @@ d3sparql.geomap = function(json, config){
 				})
 				.attr("fill-opacity",0.5)
 				.on("mouseover", function(){
-					d3.select(this) // マウスに重なった要素を選択
+					d3.select(this) 
 					.attr("style", "fill:rgb(0,0,255)")
 					.append("title")
 					.text(function(d){ 
@@ -1301,14 +1281,13 @@ d3sparql.geomap = function(json, config){
 					})
 				})
 				.on("mouseout", function(){
-					d3.select(this) // マウスに重なっていた要素を選択
+					d3.select(this) 
 					.style( "fill", function(d, i) {
 					// map SPARQL results to colors
 					return color(size[d.properties.name]);    //default is name_local instead of name
 					})
 				})
                 
-        //MapにMove Event登録
         map.events.register("moveend", map, update); 
  
         update();
@@ -2558,7 +2537,7 @@ d3sparql.modifiedmap = function(json, config) {
     var  nodes = [];
     var  links = [];
 	
-	//地図の色分け
+	//color
 	d3.json(opts.topojson, function(topojson_map) {
     var geo = topojson.feature(topojson_map, topojson_map.objects[opts.mapname]).features
     var projection = d3.geo.mercator()
@@ -2762,10 +2741,6 @@ d3sparql.cartgram = function(json, config){
 			var centroid = path.centroid(d),
 				x = centroid[0],
 				y = centroid[1];
-				
-				//console.log(average)
-				//console.log(Math.sqrt(size[d.properties.name]))
-				//console.log(Math.sqrt(size[d.properties.name])/average)
 				var tmp = Math.sqrt(size[d.properties.name])/200;
 			return "translate(" + x + "," + y + ")"
 			+  "scale(" +(tmp || 1)+ ")"
