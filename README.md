@@ -11,7 +11,11 @@ License
 - all files are distributed under same license as D3.js's one. [BSD license](https://opensource.org/licenses/BSD-3-Clause)
 
 Reference
+javascript
+added modified version of the codes on these websites to d3sparql_mod.js
 - [GUNNMA GIS GEEK](http://shimz.me/blog/)
   - [【D3.js】OpenLayers上にD3.jsで作成したSVGをオーバーレイ ](http://shimz.me/blog/d3-js/2831) 
   - [【D3.js】Force-Directed Japan ](http://shimz.me/blog/d3-js/3742)
-- [Non-Contiguous Cartogram](http://bl.ocks.org/mbostock/4055908)
+- [Mike Bostock’s Blocks ](http://bl.ocks.org/mbostock)released under [GNU General Public License, version 3](https://opensource.org/licenses/GPL-3.0)
+  - [Non-Contiguous Cartogram](http://bl.ocks.org/mbostock/4055908) 
+  - [Force-Directed States of America](http://bl.ocks.org/mbostock/1073373)
