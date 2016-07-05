@@ -19,3 +19,4 @@ added modified version of the codes on these websites to d3sparql_mod.js
 - [Mike Bostock’s Blocks ](http://bl.ocks.org/mbostock)
   - [Non-Contiguous Cartogram](http://bl.ocks.org/mbostock/4055908) released under [GNU General Public License, version 3](https://opensource.org/licenses/GPL-3.0)
   - [Force-Directed States of America](http://bl.ocks.org/mbostock/1073373) released under [GNU General Public License, version 3](https://opensource.org/licenses/GPL-3.0)
+- [ktym/d3sparql](https://github.com/ktym/d3sparql) (github) distributed under [BSD license](https://opensource.org/licenses/BSD-3-Clause)
