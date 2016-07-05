@@ -8,7 +8,7 @@ Requirement
 - please use firefox to open html as long as possible. on Google Chroum, overlayering onto map is ignored, and on IE, both map and barchart are not displayed.
 
 License
-- all files are distributed under same license as D3.js's one. [BSD license](https://opensource.org/licenses/BSD-3-Clause)
+- original parts (code same as distributed d3sparql.js) in d3sparql_mod.js and other files are distributed under [BSD license](https://opensource.org/licenses/BSD-3-Clause). Added parts of d3sparql_mod.js is distributed under [GNU General Public License, version 3](https://opensource.org/licenses/GPL-3.0).
 
 Reference
 javascript
