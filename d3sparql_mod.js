@@ -1056,7 +1056,7 @@ d3sparql.triplemap = function(json, config) {
 					.append("title")
 					.text(function(d){ 
 					console.log(d.properties)
-						var tmp = "Name: "+d.properties[Object.keys(d.properties)[2]];
+						var tmp = "Name: "+d.properties[Object.keys(d.properties)[3]];
 							return tmp; 
 					})
 				})
