@@ -955,10 +955,10 @@ d3sparql.triplemap = function(json, config) {
             .attr("style", "fill:rgb(0,0,255)")
 			.append("title")
 			.text(function(d){ 
-				var tmp = d[Object.keys(d)[0]].value +"\n"
-				+"人口：　"+ d[Object.keys(d)[2]].value+"\n"
-				+"事業所数：　"+ d[Object.keys(d)[1]].value+"\n"
-				+"CO2排出量:　"+ d[Object.keys(d)[3]].value;
+				var tmp = d[Object.keys(d)[5]].value +"\n"
+				+"Population：　"+ d[Object.keys(d)[2]].value+"\n"
+				+"NumOfOffice：　"+ d[Object.keys(d)[1]].value+"\n"
+				+"CO2Emittance:　"+ d[Object.keys(d)[3]].value;
 			return tmp; 
 			})
     })
@@ -1056,8 +1056,7 @@ d3sparql.triplemap = function(json, config) {
 					.append("title")
 					.text(function(d){ 
 					console.log(d.properties)
-						var tmp = d[Object.keys(d)[0]].value +"\n"
-							+"CO2排出量:　"+ d[Object.keys(d)[3]].value;
+						var tmp = "Name: "+d.properties[Object.keys(d.properties)[2]];
 							return tmp; 
 					})
 				})
@@ -1154,10 +1153,10 @@ d3sparql.triplemap = function(json, config) {
             .attr("style", "fill:rgb(0,0,255)")
 			.append("title")
 			.text(function(d){ 
-				var tmp = d[Object.keys(d)[0]].value +"\n"
-				+"人口：　"+ d[Object.keys(d)[2]].value+"\n"
-				+"事業所数：　"+ d[Object.keys(d)[1]].value+"\n"
-				+"CO2排出量:　"+ d[Object.keys(d)[3]].value;
+				var tmp = d[Object.keys(d)[5]].value +"\n"
+				+"Population：　"+ d[Object.keys(d)[2]].value+"\n"
+				+"NumOfOffice：　"+ d[Object.keys(d)[1]].value+"\n"
+				+"CO2Emittance:　"+ d[Object.keys(d)[3]].value;
 			return tmp; 
 			})
     })
