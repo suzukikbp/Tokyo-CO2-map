@@ -153,33 +153,10 @@
     function toggle() {
       d3sparql.toggle()
     }
-	function onButtonClick(){
-	//tmp
-		/*var year = document.getElementById("year").value;
-		if(year == '2005'){
-		document.getElementById("sparql").value="select ?label (?o AS ?size)"
-+"where {?s <http://linkdata.org/property/rdf1s4452i#2005> ?o;"
-+"rdfs:label ?label.}";
-		}
-		else if(year == '2006'){
-		document.getElementById("sparql").value="select ?label (?o AS ?size)"
-+"where {?s <http://linkdata.org/property/rdf1s4452i#2006> ?o;"
-+"rdfs:label ?label.}";
-		}
-		else if(year == '2007'){
-		document.getElementById("sparql").value="select ?label (?o AS ?size)"
-+"where {?s <http://linkdata.org/property/rdf1s4452i#2007> ?o;"
-+"rdfs:label ?label.}";
-		}
-		else{
-		//default 2007
-		document.getElementById("sparql").value="select ?label (?o AS ?size)"
-+"where {?s <http://linkdata.org/property/rdf1s4452i#2007> ?o;"
-+"rdfs:label ?label.}";
-		}*/
-		var year = document.getElementById("year").value;
-		if(year == '2005'){
-		  document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+    function onButtonClick(){
+	var year = document.getElementById("year").value;
+	if(year == '2005'){
+	  document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '2004'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -194,11 +171,12 @@
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '2006'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '2006'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '2006'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -213,11 +191,12 @@
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '2007'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '2007'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '2006'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -229,14 +208,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '2008'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '2008'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '2009'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -248,14 +229,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '2009'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '2009'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '2009'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -267,14 +250,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '2010'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '2010'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '2009'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -286,14 +271,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '2011'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '2011'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '2012'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -305,14 +292,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '2012'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '2012'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '2012'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -324,14 +313,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '1995'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '1995'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '1996'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -343,14 +334,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '1996'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '1996'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '1996'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -362,14 +355,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '1997'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '1997'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '1996'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -381,14 +376,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '1998'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '1998'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '1999'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -400,14 +397,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '1999'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '1999'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '1999'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -419,14 +418,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '2000'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '2000'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '1999'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -438,14 +439,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '2001'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '2001'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '2001'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -457,14 +460,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '2002'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '2002'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '2001'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -476,14 +481,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '2003'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '2003'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '2004'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -495,14 +502,16 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else if(year == '2004'){
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region "
+	else if(year == '2004'){
+		document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size) ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '2004'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -514,15 +523,17 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
-		else{
-			//default,2005
-			document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size)  ?region "
+	else{
+	//default,2005
+	document.getElementById("sparql").value="select ?label ?office ?pop (?co2 AS ?size)  ?region ?label2 "
 +"where {"
 +"?s1 <http://linkdata.org/property/rdf1s4452i#year> '2005'^^xsd:int;"
 +"<http://linkdata.org/property/rdf1s4452i#prop> 'office'@en."
@@ -534,9 +545,11 @@
 +"?s2 ?pop;"
 +"?s3 ?co2;"
 +"rdfs:label ?label;"
++"rdfs:label ?label2;"
 +"<http://linkdata.org/property/rdf1s4452i#state> ?state;"
 +"<http://linkdata.org/property/rdf1s4452i#region> ?region."
 +"filter(lang(?label) = 'ja')"
++"filter(lang(?label2) = 'en')"
 +"filter(?state = 'tokyo'@en)"
 +"}";
 		}
@@ -561,10 +574,6 @@
 		<p>
 			<p>year：<span id="cyr">2005</span></p>
 			<p>mapped year：<span id="gry"></span></p>
-			<!--<input type="button" value="Exec" >-->
-			<!--<button id="play" type="button" class="btn btn-default">
-			<span class="glyphicon glyphicon-play"></span>
-		  </button>-->
 		  <input type="range" min="1995" max="2012" value="2005" id="year"  onchange="onButtonClick();getyear2();exec();" onmousemove="getyear1();" />
 			<div id="output"></div>
 		</p>
