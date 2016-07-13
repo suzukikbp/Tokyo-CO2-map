@@ -10,10 +10,9 @@ Requirement
 License
 - original parts (code same as distributed d3sparql.js) in d3sparql_mod.js and other files are distributed under [BSD license](https://opensource.org/licenses/BSD-3-Clause). Added parts of d3sparql_mod.js are distributed under [GNU General Public License, version 3](https://opensource.org/licenses/GPL-3.0).
 
-Reference
-javascript
+Reference javascript: 
 added modified version of the codes on these websites to d3sparql_mod.js
-- [GUNNMA GIS GEEK](http://shimz.me/blog/)
+- [GUNNMA GIS GEEK](http://shimz.me/blog/) (in Japanese)
   - [【D3.js】OpenLayers上にD3.jsで作成したSVGをオーバーレイ ](http://shimz.me/blog/d3-js/2831) 
   - [【D3.js】Force-Directed Japan ](http://shimz.me/blog/d3-js/3742)
 - [Mike Bostock’s Blocks ](http://bl.ocks.org/mbostock)
