@@ -1,6 +1,10 @@
 # Tokyo-CO2-map
 Example of LOD map and graphs base on d3.js,d3sparql.js and SPARQL
 
+CASION!!!!!
+ENDPOINT IS NOW STUCKING(DOWN), SO THIS APPLICATION TEMPOLALLY DOES NOT WORK  (July,22, 2016)
+
+
 Description
 - Global Warming is one of the biggest problems today. As a way to realize the current situation with the problem, this webpage shows transition of amount of CO2 emission, population ,and number of offices as a distribution map, bubble and bar charts.
 
